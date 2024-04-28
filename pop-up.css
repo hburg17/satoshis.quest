@@ -1,0 +1,60 @@
+.connect-play1 {
+  align-self: stretch;
+  position: relative;
+  line-height: 44px;
+  font-weight: 500;
+}
+.open-your-minecraft1 {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--text-lg-regular-size);
+  line-height: 24px;
+  font-family: var(--font-open-sans);
+}
+.background,
+.input {
+  border-radius: var(--br-5xs);
+  padding: var(--padding-base);
+  box-sizing: border-box;
+  max-height: 1080px;
+}
+.input {
+  background-color: var(--color-mediumseagreen);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-base);
+  max-width: 883px;
+}
+.background {
+  width: 100%;
+  background-color: var(--color-white);
+  max-width: 1920px;
+}
+.background,
+.pop-up,
+.transparent-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.transparent-area {
+  align-self: stretch;
+  flex: 1;
+}
+.pop-up {
+  width: 3118px;
+  position: relative;
+  height: 1943px;
+  padding: var(--padding-13xl);
+  box-sizing: border-box;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+  text-align: center;
+  font-size: var(--font-size-17xl);
+  color: var(--color-white);
+  font-family: var(--font-roboto-slab);
+}
