@@ -803,6 +803,9 @@
   font-family: var(--text-lg-regular);
 }
 @media screen and (max-width: 960px) {
+  .frame-child {
+    height: 12px;
+  }
   .body10,
   .body9 {
     padding-left: var(--padding-13xl);
