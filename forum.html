@@ -33,6 +33,7 @@
             class="server-icon-11"
             alt=""
             src="./public/servericon-1@2x.png"
+            id="serverIcon1"
           />
 
           <div class="playsatoshisquest3">play.satoshis.quest</div>
@@ -56,13 +57,13 @@
             <div class="map1" id="statsText">Stats</div>
             <div class="map1" id="donateText">Donate</div>
           </div>
-          <div class="connect-button1">
+          <button class="connect-button1" id="connectButton">
             <img
               class="icon-game-controller1"
               alt=""
               src="./public/-icon-game-controller.svg"
             />
-          </div>
+          </button>
         </nav>
       </nav>
       <div class="body1">
@@ -116,11 +117,12 @@
           />
         </button>
         <nav class="navigation12">
-          <div class="map6" id="drawermapText">Map</div>
-          <div class="map6" id="drawerguidesText">Guides</div>
-          <div class="map6" id="drawerforumText">Forum</div>
-          <div class="map6" id="drawerstatsText">Stats</div>
-          <div class="map6" id="drawerdonateText">Donate</div>
+          <div class="home1" id="drawerhomeText">Home</div>
+          <div class="home1" id="drawermapText">Map</div>
+          <div class="home1" id="drawerguidesText">Guides</div>
+          <div class="home1" id="drawerforumText">Forum</div>
+          <div class="home1" id="drawerstatsText">Stats</div>
+          <div class="home1" id="drawerdonateText">Donate</div>
           <div class="icon-game-controller-wrapper">
             <img
               class="icon-game-controller6"
@@ -129,6 +131,22 @@
             />
           </div>
         </nav>
+      </div>
+    </div>
+
+    <div id="popUpPopup" class="popup-overlay" style="display: none">
+      <div class="pop-up">
+        <div class="transparent-area">
+          <div class="background">
+            <div class="input">
+              <div class="connect-play">Connect & Play</div>
+              <div class="open-your-minecraft">
+                Open your minecraft launcher, click "Multiplayer" and "Add
+                Server", then enter our server IP address: play.satoshis.quest
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -173,138 +191,49 @@
         });
       }
 
-      var drawermapText = document.getElementById("drawermapText");
-      if (drawermapText) {
-        drawermapText.addEventListener("click", function () {
-          window.location.href = "https://satoshis.quest/maps.html";
+      var drawerhomeText = document.getElementById("drawerhomeText");
+      if (drawerhomeText) {
+        drawerhomeText.addEventListener("click", function (e) {
+          window.location.href = "./home.html";
         });
       }
 
       var drawermapText = document.getElementById("drawermapText");
       if (drawermapText) {
         drawermapText.addEventListener("click", function (e) {
-          var popup = e.currentTarget.parentNode;
-          function isOverlay(node) {
-            return !!(
-              node &&
-              node.classList &&
-              node.classList.contains("popup-overlay")
-            );
-          }
-          while (popup && !isOverlay(popup)) {
-            popup = popup.parentNode;
-          }
-          if (isOverlay(popup)) {
-            popup.style.display = "none";
-          }
+          window.location.href = "./maps.html";
         });
       }
 
       var drawerguidesText = document.getElementById("drawerguidesText");
       if (drawerguidesText) {
-        drawerguidesText.addEventListener("click", function () {
-          window.location.href = "https://satoshis.quest/guides.html";
-        });
-      }
 
-      var drawerguidesText = document.getElementById("drawerguidesText");
-      if (drawerguidesText) {
         drawerguidesText.addEventListener("click", function (e) {
-          var popup = e.currentTarget.parentNode;
-          function isOverlay(node) {
-            return !!(
-              node &&
-              node.classList &&
-              node.classList.contains("popup-overlay")
-            );
-          }
-          while (popup && !isOverlay(popup)) {
-            popup = popup.parentNode;
-          }
-          if (isOverlay(popup)) {
-            popup.style.display = "none";
-          }
+          window.location.href = "./guides.html";
         });
       }
 
       var drawerforumText = document.getElementById("drawerforumText");
       if (drawerforumText) {
-        drawerforumText.addEventListener("click", function () {
-          window.location.href = "https://satoshis.quest/forum.html";
-        });
-      }
 
-      var drawerforumText = document.getElementById("drawerforumText");
-      if (drawerforumText) {
         drawerforumText.addEventListener("click", function (e) {
-          var popup = e.currentTarget.parentNode;
-          function isOverlay(node) {
-            return !!(
-              node &&
-              node.classList &&
-              node.classList.contains("popup-overlay")
-            );
-          }
-          while (popup && !isOverlay(popup)) {
-            popup = popup.parentNode;
-          }
-          if (isOverlay(popup)) {
-            popup.style.display = "none";
-          }
+          window.location.href = "./forum.html";
         });
       }
 
       var drawerstatsText = document.getElementById("drawerstatsText");
       if (drawerstatsText) {
-        drawerstatsText.addEventListener("click", function () {
-          window.location.href = "https://satoshis.quest/stats.html";
-        });
-      }
 
-      var drawerstatsText = document.getElementById("drawerstatsText");
-      if (drawerstatsText) {
         drawerstatsText.addEventListener("click", function (e) {
-          var popup = e.currentTarget.parentNode;
-          function isOverlay(node) {
-            return !!(
-              node &&
-              node.classList &&
-              node.classList.contains("popup-overlay")
-            );
-          }
-          while (popup && !isOverlay(popup)) {
-            popup = popup.parentNode;
-          }
-          if (isOverlay(popup)) {
-            popup.style.display = "none";
-          }
+          window.location.href = "./stats.html";
         });
       }
 
       var drawerdonateText = document.getElementById("drawerdonateText");
       if (drawerdonateText) {
-        drawerdonateText.addEventListener("click", function () {
-          window.location.href = "https://satoshis.quest/donate.html";
-        });
-      }
 
-      var drawerdonateText = document.getElementById("drawerdonateText");
-      if (drawerdonateText) {
         drawerdonateText.addEventListener("click", function (e) {
-          var popup = e.currentTarget.parentNode;
-          function isOverlay(node) {
-            return !!(
-              node &&
-              node.classList &&
-              node.classList.contains("popup-overlay")
-            );
-          }
-          while (popup && !isOverlay(popup)) {
-            popup = popup.parentNode;
-          }
-          if (isOverlay(popup)) {
-            popup.style.display = "none";
-          }
+          window.location.href = "./donate.html";
         });
       }
 
@@ -326,6 +255,13 @@
 
       for (let i = 0; i < scrollAnimElements.length; i++) {
         observer.observe(scrollAnimElements[i]);
+      }
+
+      var serverIcon1 = document.getElementById("serverIcon1");
+      if (serverIcon1) {
+        serverIcon1.addEventListener("click", function (e) {
+          window.location.href = "./home.html";
+        });
       }
 
       var hamburgerMenuV5 = document.getElementById("hamburgerMenuV5");
@@ -359,36 +295,62 @@
 
       var mapText = document.getElementById("mapText");
       if (mapText) {
-        mapText.addEventListener("click", function () {
-          window.location.href = "https://satoshis.quest/maps.html";
+        mapText.addEventListener("click", function (e) {
+          window.location.href = "./maps.html";
         });
       }
 
       var guidesText = document.getElementById("guidesText");
       if (guidesText) {
-        guidesText.addEventListener("click", function () {
-          window.location.href = "https://satoshis.quest/guides.html";
+        guidesText.addEventListener("click", function (e) {
+          window.location.href = "./guides.html";
         });
       }
 
       var forumText = document.getElementById("forumText");
       if (forumText) {
-        forumText.addEventListener("click", function () {
-          window.location.href = "https://satoshis.quest/forum.html";
+        forumText.addEventListener("click", function (e) {
+          window.location.href = "./forum.html";
         });
       }
 
       var statsText = document.getElementById("statsText");
       if (statsText) {
-        statsText.addEventListener("click", function () {
-          window.location.href = "https://satoshis.quest/stats.html";
+        statsText.addEventListener("click", function (e) {
+          window.location.href = "./stats.html";
         });
       }
 
       var donateText = document.getElementById("donateText");
       if (donateText) {
-        donateText.addEventListener("click", function () {
-          window.location.href = "https://satoshis.quest/donate.html";
+        donateText.addEventListener("click", function (e) {
+          window.location.href = "./donate.html";
+        });
+      }
+
+      var connectButton = document.getElementById("connectButton");
+      if (connectButton) {
+        connectButton.addEventListener("click", function () {
+          var popup = document.getElementById("popUpPopup");
+          if (!popup) return;
+          var popupStyle = popup.style;
+          if (popupStyle) {
+            popupStyle.display = "flex";
+            popupStyle.zIndex = 100;
+            popupStyle.backgroundColor = "rgba(113, 113, 113, 0.3)";
+            popupStyle.alignItems = "center";
+            popupStyle.justifyContent = "center";
+          }
+          popup.setAttribute("closable", "");
+
+          var onClick =
+            popup.onClick ||
+            function (e) {
+              if (e.target === popup && popup.hasAttribute("closable")) {
+                popupStyle.display = "none";
+              }
+            };
+          popup.addEventListener("click", onClick);
         });
       }
     </script>

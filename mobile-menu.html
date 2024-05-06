@@ -35,11 +35,12 @@
         />
       </button>
       <nav class="navigation12">
-        <div class="map6" id="drawermapText">Map</div>
-        <div class="map6" id="drawerguidesText">Guides</div>
-        <div class="map6" id="drawerforumText">Forum</div>
-        <div class="map6" id="drawerstatsText">Stats</div>
-        <div class="map6" id="drawerdonateText">Donate</div>
+        <div class="home1" id="drawerhomeText">Home</div>
+        <div class="home1" id="drawermapText">Map</div>
+        <div class="home1" id="drawerguidesText">Guides</div>
+        <div class="home1" id="drawerforumText">Forum</div>
+        <div class="home1" id="drawerstatsText">Stats</div>
+        <div class="home1" id="drawerdonateText">Donate</div>
         <div class="icon-game-controller-wrapper">
           <img
             class="icon-game-controller6"
@@ -91,138 +92,49 @@
         });
       }
 
-      var drawermapText = document.getElementById("drawermapText");
-      if (drawermapText) {
-        drawermapText.addEventListener("click", function () {
-          window.location.href = "https://satoshis.quest/maps.html";
+      var drawerhomeText = document.getElementById("drawerhomeText");
+      if (drawerhomeText) {
+        drawerhomeText.addEventListener("click", function (e) {
+          window.location.href = "./home.html";
         });
       }
 
       var drawermapText = document.getElementById("drawermapText");
       if (drawermapText) {
         drawermapText.addEventListener("click", function (e) {
-          var popup = e.currentTarget.parentNode;
-          function isOverlay(node) {
-            return !!(
-              node &&
-              node.classList &&
-              node.classList.contains("popup-overlay")
-            );
-          }
-          while (popup && !isOverlay(popup)) {
-            popup = popup.parentNode;
-          }
-          if (isOverlay(popup)) {
-            popup.style.display = "none";
-          }
+          window.location.href = "./maps.html";
         });
       }
 
       var drawerguidesText = document.getElementById("drawerguidesText");
       if (drawerguidesText) {
-        drawerguidesText.addEventListener("click", function () {
-          window.location.href = "https://satoshis.quest/guides.html";
-        });
-      }
 
-      var drawerguidesText = document.getElementById("drawerguidesText");
-      if (drawerguidesText) {
         drawerguidesText.addEventListener("click", function (e) {
-          var popup = e.currentTarget.parentNode;
-          function isOverlay(node) {
-            return !!(
-              node &&
-              node.classList &&
-              node.classList.contains("popup-overlay")
-            );
-          }
-          while (popup && !isOverlay(popup)) {
-            popup = popup.parentNode;
-          }
-          if (isOverlay(popup)) {
-            popup.style.display = "none";
-          }
+          window.location.href = "./guides.html";
         });
       }
 
       var drawerforumText = document.getElementById("drawerforumText");
       if (drawerforumText) {
-        drawerforumText.addEventListener("click", function () {
-          window.location.href = "https://satoshis.quest/forum.html";
-        });
-      }
 
-      var drawerforumText = document.getElementById("drawerforumText");
-      if (drawerforumText) {
         drawerforumText.addEventListener("click", function (e) {
-          var popup = e.currentTarget.parentNode;
-          function isOverlay(node) {
-            return !!(
-              node &&
-              node.classList &&
-              node.classList.contains("popup-overlay")
-            );
-          }
-          while (popup && !isOverlay(popup)) {
-            popup = popup.parentNode;
-          }
-          if (isOverlay(popup)) {
-            popup.style.display = "none";
-          }
+          window.location.href = "./forum.html";
         });
       }
 
       var drawerstatsText = document.getElementById("drawerstatsText");
       if (drawerstatsText) {
-        drawerstatsText.addEventListener("click", function () {
-          window.location.href = "https://satoshis.quest/stats.html";
-        });
-      }
 
-      var drawerstatsText = document.getElementById("drawerstatsText");
-      if (drawerstatsText) {
         drawerstatsText.addEventListener("click", function (e) {
-          var popup = e.currentTarget.parentNode;
-          function isOverlay(node) {
-            return !!(
-              node &&
-              node.classList &&
-              node.classList.contains("popup-overlay")
-            );
-          }
-          while (popup && !isOverlay(popup)) {
-            popup = popup.parentNode;
-          }
-          if (isOverlay(popup)) {
-            popup.style.display = "none";
-          }
+          window.location.href = "./stats.html";
         });
       }
 
       var drawerdonateText = document.getElementById("drawerdonateText");
       if (drawerdonateText) {
-        drawerdonateText.addEventListener("click", function () {
-          window.location.href = "https://satoshis.quest/donate.html";
-        });
-      }
 
-      var drawerdonateText = document.getElementById("drawerdonateText");
-      if (drawerdonateText) {
         drawerdonateText.addEventListener("click", function (e) {
-          var popup = e.currentTarget.parentNode;
-          function isOverlay(node) {
-            return !!(
-              node &&
-              node.classList &&
-              node.classList.contains("popup-overlay")
-            );
-          }
-          while (popup && !isOverlay(popup)) {
-            popup = popup.parentNode;
-          }
-          if (isOverlay(popup)) {
-            popup.style.display = "none";
-          }
+          window.location.href = "./donate.html";
         });
       }
 

@@ -37,6 +37,7 @@
   border-radius: var(--br-9xs);
   height: 24px;
   object-fit: cover;
+  cursor: pointer;
 }
 .playsatoshisquest13 {
   position: relative;
@@ -89,13 +90,15 @@
   height: 18px;
 }
 .connect-button6 {
-  border-radius: var(--br-9xs);
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-7xs) var(--padding-5xs);
   background-color: var(--color-mediumseagreen);
+  border-radius: var(--br-9xs);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: var(--padding-7xs) var(--padding-5xs);
 }
 .navigation13,
 .top-menu6 {
@@ -152,9 +155,13 @@
 .title1 {
   position: relative;
   line-height: 120.92%;
+  font-family: var(--text-lg-regular);
+  color: var(--color-white);
+  text-align: left;
   backdrop-filter: blur(8px);
 }
 .title {
+  font-size: var(--display-xs-semibold-size);
   font-weight: 600;
 }
 .title1 {
@@ -194,6 +201,10 @@
   justify-content: flex-end;
 }
 .wanderer-2-2-parent {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
   width: 300px;
   position: relative;
   border-radius: var(--br-5xs);
@@ -210,7 +221,31 @@
   object-fit: cover;
 }
 .carpenter-3-2-parent {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
   width: 300.5px;
+  position: relative;
+  border-radius: var(--br-5xs);
+  height: 300px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.title6,
+.title7 {
+  position: relative;
+  line-height: 120.92%;
+  backdrop-filter: blur(8px);
+}
+.title6 {
+  font-weight: 600;
+}
+.title7 {
+  font-size: var(--font-size-sm);
+}
+.scout-2-parent {
+  width: 300px;
   position: relative;
   border-radius: var(--br-5xs);
   height: 300px;
@@ -226,6 +261,14 @@
   justify-content: flex-start;
   padding: 0 var(--padding-xs) var(--padding-xs);
   gap: var(--gap-9xs);
+}
+.ranger-parent {
+  width: 300.5px;
+  position: relative;
+  border-radius: var(--br-5xs);
+  height: 300px;
+  overflow: hidden;
+  flex-shrink: 0;
 }
 .frame-parent {
   width: 100%;
@@ -382,8 +425,7 @@
   }
 }
 @media screen and (max-width: 960px) {
-  .hamburger-menu-v56,
-  .playsatoshisquest13 {
+  .hamburger-menu-v56 {
     display: flex;
   }
   .desktop-menu6,
@@ -412,8 +454,7 @@
   }
 }
 @media screen and (max-width: 420px) {
-  .desktop-menu6,
-  .playsatoshisquest13 {
+  .desktop-menu6 {
     display: none;
   }
   .body7,
@@ -478,7 +519,7 @@
   align-items: center;
   justify-content: center;
 }
-.map6 {
+.home1 {
   position: relative;
   line-height: 15px;
   cursor: pointer;
@@ -558,4 +599,65 @@
       animation-timing-function: ease-out;
     }
   }
+}
+.connect-play,
+.open-your-minecraft {
+  align-self: stretch;
+  position: relative;
+}
+.connect-play {
+  line-height: 44px;
+  font-weight: 500;
+}
+.open-your-minecraft {
+  font-size: var(--text-lg-regular-size);
+  line-height: 24px;
+  font-family: var(--font-open-sans);
+}
+.background,
+.input {
+  border-radius: var(--br-5xs);
+  padding: var(--padding-base);
+  box-sizing: border-box;
+  max-height: 1080px;
+}
+.input {
+  background-color: var(--color-mediumseagreen);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-base);
+  max-width: 883px;
+}
+.background {
+  width: 100%;
+  background-color: var(--color-white);
+  max-width: 1920px;
+}
+.background,
+.pop-up,
+.transparent-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.transparent-area {
+  align-self: stretch;
+  flex: 1;
+}
+.pop-up {
+  width: 3118px;
+  position: relative;
+  height: 1943px;
+  padding: var(--padding-13xl);
+  box-sizing: border-box;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+  text-align: center;
+  font-size: var(--font-size-17xl);
+  color: var(--color-white);
+  font-family: var(--font-roboto-slab);
 }
