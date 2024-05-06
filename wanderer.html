@@ -30,7 +30,7 @@
         <div class="background1">
           <div class="frame-parent1">
             <div class="close-icon-wrapper">
-              <button class="close-icon1">
+              <button class="close-icon1" id="popupcloseIcon">
                 <img
                   class="close-icon-item"
                   alt=""
@@ -80,5 +80,27 @@
         </div>
       </div>
     </div>
+
+    <script>
+      var popupcloseIcon = document.getElementById("popupcloseIcon");
+      if (popupcloseIcon) {
+        popupcloseIcon.addEventListener("click", function (e) {
+          var popup = e.currentTarget.parentNode;
+          function isOverlay(node) {
+            return !!(
+              node &&
+              node.classList &&
+              node.classList.contains("popup-overlay")
+            );
+          }
+          while (popup && !isOverlay(popup)) {
+            popup = popup.parentNode;
+          }
+          if (isOverlay(popup)) {
+            popup.style.display = "none";
+          }
+        });
+      }
+    </script>
   </body>
 </html>

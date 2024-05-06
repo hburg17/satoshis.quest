@@ -335,7 +335,7 @@
           <div class="background1">
             <div class="frame-parent1">
               <div class="close-icon-wrapper">
-                <button class="close-icon1">
+                <button class="close-icon1" id="popupcloseIcon">
                   <img
                     class="close-icon-item"
                     alt=""
@@ -409,6 +409,7 @@
       }
 
 
+
       var drawercloseIcon = document.getElementById("drawercloseIcon");
       if (drawercloseIcon) {
         drawercloseIcon.addEventListener("click", function (e) {
@@ -430,6 +431,7 @@
       }
 
 
+
       var drawerhomeText = document.getElementById("drawerhomeText");
       if (drawerhomeText) {
         drawerhomeText.addEventListener("click", function (e) {
@@ -438,12 +440,14 @@
       }
 
 
+
       var drawermapText = document.getElementById("drawermapText");
       if (drawermapText) {
         drawermapText.addEventListener("click", function (e) {
           window.location.href = "./maps.html";
         });
       }
+
 
 
       var drawerguidesText = document.getElementById("drawerguidesText");
@@ -455,6 +459,7 @@
       }
 
 
+
       var drawerforumText = document.getElementById("drawerforumText");
       if (drawerforumText) {
 
@@ -464,6 +469,7 @@
       }
 
 
+
       var drawerstatsText = document.getElementById("drawerstatsText");
       if (drawerstatsText) {
 
@@ -471,6 +477,7 @@
           window.location.href = "./stats.html";
         });
       }
+
 
 
       var drawerdonateText = document.getElementById("drawerdonateText");
@@ -498,9 +505,31 @@
       );
 
 
+
       for (let i = 0; i < scrollAnimElements.length; i++) {
         observer.observe(scrollAnimElements[i]);
       }
+
+      var popupcloseIcon = document.getElementById("popupcloseIcon");
+      if (popupcloseIcon) {
+        popupcloseIcon.addEventListener("click", function (e) {
+          var popup = e.currentTarget.parentNode;
+          function isOverlay(node) {
+            return !!(
+              node &&
+              node.classList &&
+              node.classList.contains("popup-overlay")
+            );
+          }
+          while (popup && !isOverlay(popup)) {
+            popup = popup.parentNode;
+          }
+          if (isOverlay(popup)) {
+            popup.style.display = "none";
+          }
+        });
+      }
+
 
 
       var serverIcon1 = document.getElementById("serverIcon1");
@@ -509,6 +538,7 @@
           window.location.href = "https://satoshis.quest/";
         });
       }
+
 
 
       var hamburgerMenuV5 = document.getElementById("hamburgerMenuV5");
@@ -527,6 +557,7 @@
           drawerOverlay.setAttribute("closable", "");
 
 
+
           var onClick =
             drawerOverlay.onClick ||
             function (e) {
@@ -542,12 +573,14 @@
       }
 
 
+
       var mapText = document.getElementById("mapText");
       if (mapText) {
         mapText.addEventListener("click", function (e) {
           window.location.href = "./maps.html";
         });
       }
+
 
 
       var guidesText = document.getElementById("guidesText");
@@ -558,12 +591,14 @@
       }
 
 
+
       var forumText = document.getElementById("forumText");
       if (forumText) {
         forumText.addEventListener("click", function (e) {
           window.location.href = "./forum.html";
         });
       }
+
 
 
       var statsText = document.getElementById("statsText");
@@ -574,12 +609,14 @@
       }
 
 
+
       var donateText = document.getElementById("donateText");
       if (donateText) {
         donateText.addEventListener("click", function (e) {
           window.location.href = "./donate.html";
         });
       }
+
 
 
       var connectButton = document.getElementById("connectButton");
@@ -598,6 +635,7 @@
           popup.setAttribute("closable", "");
 
 
+
           var onClick =
             popup.onClick ||
             function (e) {
@@ -608,6 +646,7 @@
           popup.addEventListener("click", onClick);
         });
       }
+
 
       var frameButton = document.getElementById("frameButton");
       if (frameButton) {
@@ -624,6 +663,7 @@
           }
           popup.setAttribute("closable", "");
 
+
           var onClick =
             popup.onClick ||
             function (e) {
@@ -634,6 +674,7 @@
           popup.addEventListener("click", onClick);
         });
       }
+    </script>
     </script>
     </script>
   </body>
