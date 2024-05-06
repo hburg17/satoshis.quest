@@ -29,13 +29,7 @@
     <div class="maps">
       <nav class="top-menu4">
         <div class="server-icon-1-parent2">
-          <img
-            class="server-icon-14"
-            alt=""
-            src="./public/servericon-1@2x.png"
-            id="serverIcon1"
-          />
-
+          <button class="server-icon-14" id="serverIcon1"></button>
           <div class="playsatoshisquest9">play.satoshis.quest</div>
         </div>
         <button class="hamburger-menu-v54" id="hamburgerMenuV5">
@@ -143,12 +137,9 @@
       <div class="pop-up">
         <div class="transparent-area">
           <div class="background">
-            <div class="input">
-              <div class="connect-play">Connect & Play</div>
-              <div class="open-your-minecraft">
-                Open your minecraft launcher, click "Multiplayer" and "Add
-                Server", then enter our server IP address: play.satoshis.quest
-              </div>
+            <div class="satoshis-quest-parent5">
+              <div class="satoshis-quest7">Satoshi’s Quest</div>
+              <div class="playsatoshisquest13">play.satoshis.quest</div>
             </div>
           </div>
         </div>
@@ -176,6 +167,7 @@
         });
       }
 
+
       var drawercloseIcon = document.getElementById("drawercloseIcon");
       if (drawercloseIcon) {
         drawercloseIcon.addEventListener("click", function (e) {
@@ -196,6 +188,7 @@
         });
       }
 
+
       var drawerhomeText = document.getElementById("drawerhomeText");
       if (drawerhomeText) {
         drawerhomeText.addEventListener("click", function (e) {
@@ -203,12 +196,14 @@
         });
       }
 
+
       var drawermapText = document.getElementById("drawermapText");
       if (drawermapText) {
         drawermapText.addEventListener("click", function (e) {
           window.location.href = "./maps.html";
         });
       }
+
 
       var drawerguidesText = document.getElementById("drawerguidesText");
       if (drawerguidesText) {
@@ -218,6 +213,7 @@
         });
       }
 
+
       var drawerforumText = document.getElementById("drawerforumText");
       if (drawerforumText) {
 
@@ -226,6 +222,7 @@
         });
       }
 
+
       var drawerstatsText = document.getElementById("drawerstatsText");
       if (drawerstatsText) {
 
@@ -233,6 +230,7 @@
           window.location.href = "./stats.html";
         });
       }
+
 
       var drawerdonateText = document.getElementById("drawerdonateText");
       if (drawerdonateText) {
@@ -258,16 +256,19 @@
         }
       );
 
+
       for (let i = 0; i < scrollAnimElements.length; i++) {
         observer.observe(scrollAnimElements[i]);
       }
 
+
       var serverIcon1 = document.getElementById("serverIcon1");
       if (serverIcon1) {
-        serverIcon1.addEventListener("click", function (e) {
-          window.location.href = "./home.html";
+        serverIcon1.addEventListener("click", function () {
+          window.location.href = "https://satoshis.quest/";
         });
       }
+
 
       var hamburgerMenuV5 = document.getElementById("hamburgerMenuV5");
       if (hamburgerMenuV5) {
@@ -284,6 +285,7 @@
           }
           drawerOverlay.setAttribute("closable", "");
 
+
           var onClick =
             drawerOverlay.onClick ||
             function (e) {
@@ -298,12 +300,14 @@
         });
       }
 
+
       var mapText = document.getElementById("mapText");
       if (mapText) {
         mapText.addEventListener("click", function (e) {
           window.location.href = "./maps.html";
         });
       }
+
 
       var guidesText = document.getElementById("guidesText");
       if (guidesText) {
@@ -312,12 +316,14 @@
         });
       }
 
+
       var forumText = document.getElementById("forumText");
       if (forumText) {
         forumText.addEventListener("click", function (e) {
           window.location.href = "./forum.html";
         });
       }
+
 
       var statsText = document.getElementById("statsText");
       if (statsText) {
@@ -326,12 +332,14 @@
         });
       }
 
+
       var donateText = document.getElementById("donateText");
       if (donateText) {
         donateText.addEventListener("click", function (e) {
           window.location.href = "./donate.html";
         });
       }
+
 
       var connectButton = document.getElementById("connectButton");
       if (connectButton) {
@@ -348,6 +356,7 @@
           }
           popup.setAttribute("closable", "");
 
+
           var onClick =
             popup.onClick ||
             function (e) {
@@ -358,6 +367,7 @@
           popup.addEventListener("click", onClick);
         });
       }
+    </script>
     </script>
   </body>
 </html>

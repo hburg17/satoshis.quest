@@ -1,0 +1,194 @@
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    transform-origin: center center;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    transform: scale(0.91);
+    animation-timing-function: ease-in;
+  }
+  17% {
+    transform: scale(0.98);
+    animation-timing-function: ease-out;
+  }
+  33% {
+    transform: scale(0.87);
+    animation-timing-function: ease-in;
+  }
+  45% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+}
+.close-icon-item {
+  width: 24px;
+  position: relative;
+  height: 24px;
+}
+.close-icon-item:active {
+  animation: 1s ease 0s 1 normal none pulsate;
+  opacity: 1;
+}
+.close-icon-wrapper,
+.close-icon1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.close-icon1 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  align-items: center;
+}
+.close-icon-wrapper {
+  align-self: stretch;
+  align-items: flex-end;
+  padding: var(--padding-29xl) var(--padding-29xl) 0 var(--padding-5xl);
+}
+.heading5 {
+  align-self: stretch;
+  position: relative;
+  line-height: 32px;
+  font-weight: 600;
+}
+.as-a-wanderer,
+.requirements {
+  margin-block-start: 0;
+  margin-block-end: 18px;
+}
+.requirements {
+  font-weight: 600;
+}
+.hours-of-playtime {
+  margin-bottom: 0;
+}
+.hours-of-playtime-5000-blocks {
+  margin: 0;
+  font-size: inherit;
+  padding-left: var(--padding-5xl);
+}
+.rewards {
+  margin: 0;
+  font-weight: 600;
+}
+.paragraph3 {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--text-lg-regular-size);
+  line-height: 28px;
+  color: var(--gray-500);
+}
+.body9,
+.heading-and-paragraph5 {
+  display: flex;
+  flex-direction: column;
+}
+.heading-and-paragraph5 {
+  align-self: stretch;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-13xl);
+}
+.body9 {
+  align-items: center;
+  padding: var(--padding-5xl) var(--padding-237xl) var(--padding-45xl);
+}
+.body9,
+.frame-parent1 {
+  align-self: stretch;
+  background-color: var(--color-white);
+  overflow: hidden;
+  justify-content: flex-start;
+}
+.background1,
+.frame-parent1,
+.transparent-area1,
+.wanderer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.background1 {
+  width: 100%;
+  border-radius: var(--br-5xs);
+  background-color: var(--color-white);
+  justify-content: flex-start;
+  max-width: 1920px;
+  max-height: 1080px;
+}
+.transparent-area1,
+.wanderer {
+  justify-content: center;
+}
+.transparent-area1 {
+  align-self: stretch;
+  flex: 1;
+}
+.wanderer {
+  width: 3118px;
+  position: relative;
+  height: 1943px;
+  padding: var(--padding-13xl);
+  box-sizing: border-box;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+  text-align: left;
+  font-size: var(--font-size-17xl);
+  color: var(--gray-900);
+  font-family: var(--text-lg-regular);
+}
+@media screen and (max-width: 960px) {
+  .body9 {
+    padding-left: var(--padding-13xl);
+    padding-top: var(--padding-13xl);
+    padding-right: var(--padding-13xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 420px) {
+  .close-icon-item:active {
+    animation: 1s ease-in 0s 1 normal none pulsate;
+    opacity: 1;
+  }
+  @keyframes pulsate {
+    0% {
+      transform: scale(1);
+      transform-origin: center center;
+      animation-timing-function: ease-out;
+    }
+    10% {
+      transform: scale(0.91);
+      animation-timing-function: ease-in;
+    }
+    17% {
+      transform: scale(0.98);
+      animation-timing-function: ease-out;
+    }
+    33% {
+      transform: scale(0.87);
+      animation-timing-function: ease-in;
+    }
+    45% {
+      transform: scale(1);
+      animation-timing-function: ease-out;
+    }
+  }
+  .body9 {
+    padding-left: var(--padding-base);
+    padding-top: var(--padding-13xl);
+    padding-right: var(--padding-base);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 350px) {
+  .body9 {
+    padding-left: var(--padding-base);
+    padding-top: var(--padding-13xl);
+    padding-right: var(--padding-base);
+    box-sizing: border-box;
+  }
+}

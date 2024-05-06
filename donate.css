@@ -32,12 +32,18 @@
   }
 }
 .server-icon-15 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
   width: 24px;
   position: relative;
   border-radius: var(--br-9xs);
   height: 24px;
-  object-fit: cover;
-  cursor: pointer;
+  background-image: url(./public/servericon-1@2x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
 }
 .playsatoshisquest11 {
   position: relative;
@@ -419,40 +425,40 @@
     }
   }
 }
-.connect-play,
-.open-your-minecraft {
+.satoshis-quest7 {
   align-self: stretch;
   position: relative;
-}
-.connect-play {
   line-height: 44px;
   font-weight: 500;
 }
-.open-your-minecraft {
+.playsatoshisquest13 {
+  align-self: stretch;
+  position: relative;
   font-size: var(--text-lg-regular-size);
   line-height: 24px;
   font-family: var(--font-open-sans);
 }
 .background,
-.input {
+.satoshis-quest-parent5 {
+  width: 100%;
   border-radius: var(--br-5xs);
-  padding: var(--padding-base);
   box-sizing: border-box;
-  max-height: 1080px;
 }
-.input {
+.satoshis-quest-parent5 {
   background-color: var(--color-mediumseagreen);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding: var(--padding-5xl) var(--padding-base);
   gap: var(--gap-base);
   max-width: 883px;
 }
 .background {
-  width: 100%;
   background-color: var(--color-white);
+  padding: var(--padding-base);
   max-width: 1920px;
+  max-height: 1080px;
 }
 .background,
 .pop-up,
@@ -477,6 +483,6 @@
   overflow: auto;
   text-align: center;
   font-size: var(--font-size-17xl);
-  color: var(--color-white);
+  color: var(--color-whitesmoke-200);
   font-family: var(--font-roboto-slab);
 }

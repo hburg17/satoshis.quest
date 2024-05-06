@@ -29,13 +29,7 @@
     <div class="stats2">
       <nav class="top-menu2">
         <div class="server-icon-1-container">
-          <img
-            class="server-icon-12"
-            alt=""
-            src="./public/servericon-1@2x.png"
-            id="serverIcon1"
-          />
-
+          <button class="server-icon-12" id="serverIcon1"></button>
           <div class="playsatoshisquest5">play.satoshis.quest</div>
         </div>
         <button class="hamburger-menu-v52" id="hamburgerMenuV5">
@@ -152,12 +146,9 @@
       <div class="pop-up">
         <div class="transparent-area">
           <div class="background">
-            <div class="input">
-              <div class="connect-play">Connect & Play</div>
-              <div class="open-your-minecraft">
-                Open your minecraft launcher, click "Multiplayer" and "Add
-                Server", then enter our server IP address: play.satoshis.quest
-              </div>
+            <div class="satoshis-quest-parent5">
+              <div class="satoshis-quest7">Satoshi’s Quest</div>
+              <div class="playsatoshisquest13">play.satoshis.quest</div>
             </div>
           </div>
         </div>
@@ -273,8 +264,8 @@
 
       var serverIcon1 = document.getElementById("serverIcon1");
       if (serverIcon1) {
-        serverIcon1.addEventListener("click", function (e) {
-          window.location.href = "./home.html";
+        serverIcon1.addEventListener("click", function () {
+          window.location.href = "https://satoshis.quest/";
         });
       }
 
