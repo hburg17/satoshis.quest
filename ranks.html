@@ -334,17 +334,20 @@
         <div class="transparent-area1">
           <div class="background1">
             <div class="frame-parent1">
-              <div class="close-icon-wrapper">
-                <button class="close-icon1" id="popupcloseIcon">
-                  <img
-                    class="close-icon-item"
-                    alt=""
-                    src="./public/group-211.svg"
-                  />
-                </button>
-              </div>
+              <div class="frame-child"></div>
               <div class="body9">
                 <div class="heading-and-paragraph5">
+                  <button class="close-icon1" id="popupcloseIcon">
+                    <img
+                      class="close-icon-item"
+                      alt=""
+                      src="./public/group-211.svg"
+                    />
+                  </button>
+                </div>
+              </div>
+              <div class="body10">
+                <div class="heading-and-paragraph6">
                   <div class="heading5">Wanderer</div>
                   <div class="paragraph3">
                     <p class="as-a-wanderer">
@@ -410,6 +413,7 @@
 
 
 
+
       var drawercloseIcon = document.getElementById("drawercloseIcon");
       if (drawercloseIcon) {
         drawercloseIcon.addEventListener("click", function (e) {
@@ -432,6 +436,7 @@
 
 
 
+
       var drawerhomeText = document.getElementById("drawerhomeText");
       if (drawerhomeText) {
         drawerhomeText.addEventListener("click", function (e) {
@@ -441,12 +446,14 @@
 
 
 
+
       var drawermapText = document.getElementById("drawermapText");
       if (drawermapText) {
         drawermapText.addEventListener("click", function (e) {
           window.location.href = "./maps.html";
         });
       }
+
 
 
 
@@ -460,6 +467,7 @@
 
 
 
+
       var drawerforumText = document.getElementById("drawerforumText");
       if (drawerforumText) {
 
@@ -470,6 +478,7 @@
 
 
 
+
       var drawerstatsText = document.getElementById("drawerstatsText");
       if (drawerstatsText) {
 
@@ -477,6 +486,7 @@
           window.location.href = "./stats.html";
         });
       }
+
 
 
 
@@ -506,9 +516,11 @@
 
 
 
+
       for (let i = 0; i < scrollAnimElements.length; i++) {
         observer.observe(scrollAnimElements[i]);
       }
+
 
       var popupcloseIcon = document.getElementById("popupcloseIcon");
       if (popupcloseIcon) {
@@ -532,12 +544,14 @@
 
 
 
+
       var serverIcon1 = document.getElementById("serverIcon1");
       if (serverIcon1) {
         serverIcon1.addEventListener("click", function () {
           window.location.href = "https://satoshis.quest/";
         });
       }
+
 
 
 
@@ -558,6 +572,7 @@
 
 
 
+
           var onClick =
             drawerOverlay.onClick ||
             function (e) {
@@ -574,12 +589,14 @@
 
 
 
+
       var mapText = document.getElementById("mapText");
       if (mapText) {
         mapText.addEventListener("click", function (e) {
           window.location.href = "./maps.html";
         });
       }
+
 
 
 
@@ -592,12 +609,14 @@
 
 
 
+
       var forumText = document.getElementById("forumText");
       if (forumText) {
         forumText.addEventListener("click", function (e) {
           window.location.href = "./forum.html";
         });
       }
+
 
 
 
@@ -610,12 +629,14 @@
 
 
 
+
       var donateText = document.getElementById("donateText");
       if (donateText) {
         donateText.addEventListener("click", function (e) {
           window.location.href = "./donate.html";
         });
       }
+
 
 
 
@@ -636,6 +657,7 @@
 
 
 
+
           var onClick =
             popup.onClick ||
             function (e) {
@@ -646,6 +668,7 @@
           popup.addEventListener("click", onClick);
         });
       }
+
 
 
       var frameButton = document.getElementById("frameButton");
@@ -664,6 +687,7 @@
           popup.setAttribute("closable", "");
 
 
+
           var onClick =
             popup.onClick ||
             function (e) {
@@ -674,6 +698,7 @@
           popup.addEventListener("click", onClick);
         });
       }
+    </script>
     </script>
     </script>
     </script>

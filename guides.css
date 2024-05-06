@@ -319,7 +319,8 @@
   }
 }
 @media screen and (max-width: 420px) {
-  .desktop-menu3 {
+  .desktop-menu3,
+  .playsatoshisquest7 {
     display: none;
   }
   .body4,
