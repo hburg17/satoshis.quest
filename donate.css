@@ -63,7 +63,7 @@
   animation: 1s ease-out 0s 1 normal none pulsate;
   opacity: 1;
 }
-.map4 {
+.map5 {
   position: relative;
   line-height: 15px;
   cursor: pointer;
@@ -75,7 +75,7 @@
   justify-content: flex-end;
   gap: var(--gap-xl);
 }
-.icon-game-controller4 {
+.icon-game-controller5 {
   width: 24.5px;
   position: relative;
   height: 18px;
@@ -89,7 +89,7 @@
   justify-content: flex-start;
   padding: var(--padding-7xs) var(--padding-5xs);
 }
-.navigation8,
+.navigation9,
 .top-menu4 {
   margin: 0;
   display: flex;
@@ -98,7 +98,7 @@
   text-align: right;
   color: var(--color-white);
 }
-.navigation8 {
+.navigation9 {
   height: 40px;
   width: 317px;
   justify-content: flex-end;
@@ -193,7 +193,7 @@
 .icon-twitter4 {
   width: 29.5px;
 }
-.navigation9 {
+.navigation10 {
   margin: 0;
   height: 40px;
   flex-direction: row;
@@ -201,8 +201,8 @@
   gap: var(--gap-13xl);
 }
 .bottom-menu4,
-.donate4,
-.navigation9 {
+.donate5,
+.navigation10 {
   display: flex;
   align-items: center;
 }
@@ -218,7 +218,7 @@
   color: var(--color-white);
   font-family: var(--font-roboto-slab);
 }
-.donate4 {
+.donate5 {
   width: 100%;
   position: relative;
   background-color: var(--color-white);
@@ -227,7 +227,7 @@
   justify-content: flex-start;
 }
 @media screen and (max-width: 1200px) {
-  .navigation8 {
+  .navigation9 {
     display: flex;
   }
   .bottom-menu4,
@@ -243,7 +243,7 @@
     display: flex;
   }
   .desktop-menu4,
-  .navigation8 {
+  .navigation9 {
     display: none;
   }
   .body4,
@@ -313,7 +313,7 @@
   .bottom-menu-inner2 {
     display: none;
   }
-  .navigation9 {
+  .navigation10 {
     display: flex;
   }
   .bottom-menu4 {

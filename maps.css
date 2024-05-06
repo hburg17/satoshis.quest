@@ -63,7 +63,7 @@
   animation: 1s ease-out 0s 1 normal none pulsate;
   opacity: 1;
 }
-.map3 {
+.map4 {
   position: relative;
   line-height: 15px;
   cursor: pointer;
@@ -75,7 +75,7 @@
   justify-content: flex-end;
   gap: var(--gap-xl);
 }
-.icon-game-controller3 {
+.icon-game-controller4 {
   width: 24.5px;
   position: relative;
   height: 18px;
@@ -89,7 +89,7 @@
   justify-content: flex-start;
   padding: var(--padding-7xs) var(--padding-5xs);
 }
-.navigation6,
+.navigation7,
 .top-menu3 {
   margin: 0;
   display: flex;
@@ -98,7 +98,7 @@
   text-align: right;
   color: var(--color-white);
 }
-.navigation6 {
+.navigation7 {
   height: 40px;
   width: 317px;
   justify-content: flex-end;
@@ -195,7 +195,7 @@
 .icon-twitter3 {
   width: 29.5px;
 }
-.navigation7 {
+.navigation8 {
   margin: 0;
   height: 40px;
   flex-direction: row;
@@ -204,7 +204,7 @@
 }
 .bottom-menu3,
 .maps,
-.navigation7 {
+.navigation8 {
   display: flex;
   align-items: center;
 }
@@ -229,7 +229,7 @@
   justify-content: flex-start;
 }
 @media screen and (max-width: 1200px) {
-  .navigation6 {
+  .navigation7 {
     display: flex;
   }
   .bottom-menu3,
@@ -245,7 +245,7 @@
     display: flex;
   }
   .desktop-menu3,
-  .navigation6 {
+  .navigation7 {
     display: none;
   }
   .body3,
@@ -315,7 +315,7 @@
   .bottom-menu-inner1 {
     display: none;
   }
-  .navigation7 {
+  .navigation8 {
     display: flex;
   }
   .bottom-menu3 {
