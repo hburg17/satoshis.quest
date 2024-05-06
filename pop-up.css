@@ -1,12 +1,13 @@
-.connect-play1 {
+.connect-play,
+.open-your-minecraft {
   align-self: stretch;
   position: relative;
+}
+.connect-play {
   line-height: 44px;
   font-weight: 500;
 }
-.open-your-minecraft1 {
-  align-self: stretch;
-  position: relative;
+.open-your-minecraft {
   font-size: var(--text-lg-regular-size);
   line-height: 24px;
   font-family: var(--font-open-sans);

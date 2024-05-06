@@ -21,19 +21,28 @@
     animation-timing-function: ease-out;
   }
 }
-.mask-group-12 {
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.server-icon-12 {
   width: 24px;
   position: relative;
   border-radius: var(--br-9xs);
   height: 24px;
   object-fit: cover;
-  cursor: pointer;
 }
-.playsatoshisquest4 {
+.playsatoshisquest5 {
   position: relative;
   line-height: 15px;
 }
-.mask-group-1-container {
+.server-icon-1-container {
   height: 40px;
   display: flex;
   flex-direction: row;
@@ -52,18 +61,17 @@
   height: 3.6px;
 }
 .hamburger-menu-v52 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
   height: 24px;
   display: none;
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-between;
 }
-.hamburger-menu-v52:active {
-  cursor: auto;
-  animation: 1s ease-out 0s 1 normal none pulsate;
-  opacity: 1;
-}
-.map3 {
+.map2 {
   position: relative;
   line-height: 15px;
   cursor: pointer;
@@ -75,7 +83,7 @@
   justify-content: flex-end;
   gap: var(--gap-xl);
 }
-.icon-game-controller3 {
+.icon-game-controller2 {
   width: 24.5px;
   position: relative;
   height: 18px;
@@ -89,7 +97,7 @@
   justify-content: flex-start;
   padding: var(--padding-7xs) var(--padding-5xs);
 }
-.navigation5,
+.navigation4,
 .top-menu2 {
   margin: 0;
   display: flex;
@@ -98,7 +106,7 @@
   text-align: right;
   color: var(--color-white);
 }
-.navigation5 {
+.navigation4 {
   height: 40px;
   width: 317px;
   justify-content: flex-end;
@@ -114,15 +122,48 @@
   font-size: var(--text-lg-regular-size);
   font-family: var(--font-roboto-slab);
 }
-.body-item {
-  border: 0;
+.heading,
+.paragraph {
   align-self: stretch;
+  position: relative;
+}
+.heading {
+  line-height: 32px;
+  font-weight: 600;
+}
+.paragraph {
+  font-size: var(--text-lg-regular-size);
+  line-height: 28px;
+  color: var(--gray-500);
+}
+.body3,
+.heading-and-paragraph {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.heading-and-paragraph {
+  align-self: stretch;
+  align-items: flex-start;
+  gap: var(--gap-base);
+}
+.body3 {
+  width: 723px;
+  background-color: var(--color-white);
+  overflow: hidden;
+  align-items: center;
+}
+.body-item {
   border-radius: var(--br-5xs);
   background-color: var(--color-whitesmoke-100);
   height: 305px;
 }
-.body2 {
+.body-item,
+.body2,
+.spacer2 {
   align-self: stretch;
+}
+.body2 {
   background-color: var(--color-white);
   overflow: hidden;
   display: flex;
@@ -130,13 +171,18 @@
   align-items: center;
   justify-content: flex-start;
   padding: var(--padding-13xl) var(--padding-45xl);
+  gap: var(--gap-13xl);
 }
-.satoshis-quest2 {
+.spacer2 {
+  position: relative;
+  height: 80px;
+}
+.satoshis-quest3 {
   position: relative;
   line-height: 15px;
   font-weight: 600;
 }
-.playsatoshisquest5 {
+.playsatoshisquest6 {
   height: 15px;
   position: relative;
   font-size: var(--font-size-base);
@@ -145,7 +191,7 @@
   color: var(--color-lightgray);
   display: inline-block;
 }
-.satoshis-quest-container {
+.satoshis-quest-parent1 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -191,7 +237,7 @@
 .icon-twitter2 {
   width: 29.5px;
 }
-.navigation6 {
+.navigation5 {
   margin: 0;
   height: 40px;
   flex-direction: row;
@@ -199,8 +245,8 @@
   gap: var(--gap-13xl);
 }
 .bottom-menu2,
-.navigation6,
-.stats3 {
+.navigation5,
+.stats2 {
   display: flex;
   align-items: center;
 }
@@ -216,16 +262,20 @@
   color: var(--color-white);
   font-family: var(--font-roboto-slab);
 }
-.stats3 {
+.stats2 {
   width: 100%;
   position: relative;
   background-color: var(--color-white);
   overflow: hidden;
   flex-direction: column;
   justify-content: flex-start;
+  text-align: left;
+  font-size: var(--display-xs-semibold-size);
+  color: var(--gray-900);
+  font-family: var(--text-lg-regular);
 }
 @media screen and (max-width: 1200px) {
-  .navigation5 {
+  .navigation4 {
     display: flex;
   }
   .bottom-menu2,
@@ -237,24 +287,26 @@
 }
 @media screen and (max-width: 960px) {
   .hamburger-menu-v52,
-  .playsatoshisquest4 {
+  .playsatoshisquest5 {
     display: flex;
   }
   .desktop-menu2,
-  .navigation5 {
+  .navigation4 {
     display: none;
   }
   .body2,
+  .body3,
   .top-menu2 {
     padding-left: var(--padding-13xl);
     padding-right: var(--padding-13xl);
     box-sizing: border-box;
   }
-  .body2 {
+  .body2,
+  .body3 {
     padding-top: var(--padding-13xl);
   }
-  .playsatoshisquest5,
-  .satoshis-quest2 {
+  .playsatoshisquest6,
+  .satoshis-quest3 {
     display: flex;
   }
   .bottom-menu2 {
@@ -265,10 +317,125 @@
 }
 @media screen and (max-width: 420px) {
   .desktop-menu2,
-  .playsatoshisquest4 {
+  .playsatoshisquest5 {
     display: none;
   }
-  .hamburger-menu-v52:active {
+  .body2,
+  .body3,
+  .top-menu2 {
+    padding-left: var(--padding-base);
+    padding-right: var(--padding-base);
+    box-sizing: border-box;
+  }
+  .body2,
+  .body3 {
+    padding-top: var(--padding-13xl);
+  }
+  .playsatoshisquest6,
+  .satoshis-quest3 {
+    display: flex;
+  }
+  .frame-div {
+    display: none;
+  }
+  .navigation5 {
+    display: flex;
+  }
+  .bottom-menu2 {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-left: var(--padding-base);
+    padding-right: var(--padding-base);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 350px) {
+  .body2,
+  .body3 {
+    padding-left: var(--padding-base);
+    padding-top: var(--padding-13xl);
+    padding-right: var(--padding-base);
+    box-sizing: border-box;
+  }
+}
+.close-icon-child {
+  width: 24px;
+  position: relative;
+  height: 24px;
+  cursor: pointer;
+}
+.close-icon-child:active {
+  animation: 1s ease 0s 1 normal none pulsate;
+  opacity: 1;
+}
+.close-icon {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  width: 31.8px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.map6 {
+  position: relative;
+  line-height: 15px;
+  cursor: pointer;
+}
+.icon-game-controller6 {
+  width: 24.5px;
+  position: relative;
+  height: 18px;
+}
+.icon-game-controller-wrapper {
+  border-radius: var(--br-9xs);
+  background-color: var(--color-mediumseagreen);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-7xs) var(--padding-5xs);
+}
+.mobile-menu,
+.navigation12 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+.navigation12 {
+  margin: 0;
+  width: 144px;
+  align-items: flex-start;
+  padding: var(--padding-base) 0 0;
+  gap: 24px;
+  text-align: right;
+  font-size: var(--font-size-xl);
+  color: var(--color-white);
+  font-family: var(--font-open-sans);
+}
+.mobile-menu {
+  width: 200px;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.85);
+  align-items: flex-end;
+  padding: var(--padding-base) var(--padding-13xl);
+  gap: 10px;
+  opacity: 0;
+  height: 100%;
+  max-width: 90%;
+  overflow: auto;
+}
+.mobile-menu.animate {
+  animation: 0.25s ease 0s 1 normal forwards slide-in-right;
+}
+@media screen and (max-width: 420px) {
+  .close-icon-child:active {
     animation: 1s ease-in 0s 1 normal none pulsate;
     opacity: 1;
   }
@@ -294,41 +461,5 @@
       transform: scale(1);
       animation-timing-function: ease-out;
     }
-  }
-  .body2,
-  .top-menu2 {
-    padding-left: var(--padding-base);
-    padding-right: var(--padding-base);
-    box-sizing: border-box;
-  }
-  .body2 {
-    padding-top: var(--padding-13xl);
-  }
-  .playsatoshisquest5,
-  .satoshis-quest2 {
-    display: flex;
-  }
-  .frame-div {
-    display: none;
-  }
-  .navigation6 {
-    display: flex;
-  }
-  .bottom-menu2 {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding-left: var(--padding-base);
-    padding-right: var(--padding-base);
-    box-sizing: border-box;
-  }
-}
-@media screen and (max-width: 350px) {
-  .body2 {
-    padding-left: var(--padding-base);
-    padding-top: var(--padding-13xl);
-    padding-right: var(--padding-base);
-    box-sizing: border-box;
   }
 }
