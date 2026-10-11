@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Satoshi's Quest</title>
+
+    <!-- Tailwind CSS Browser Script -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body class="bg-white">
+
+    <!-- ======================================= -->
+    <!-- Header L, XL, 2XL                       -->
+    <!-- ======================================= -->
+
+    <div class="hidden md:block">
+        <div class="w-full h-18">
+            <div class="w-full h-full px-8 py-4 bg-neutral-900 flex justify-between items-center">
+
+                <!-- Server Logo and Name -->
+                <div class="h-10 flex justify-start items-center gap-4">
+
+                    <!-- Clickable Home Logo -->
+                    <a href="index.html" aria-label="Home">
+                        <img
+                            class="size-6 rounded-sm"
+                            src="images/server_icon.svg"
+                            alt="Server icon"
+                        >
+                    </a>
+
+                    <!-- Server Name -->
+                    <span class="text-white text-lg font-normal font-['Roboto_Slab'] leading-4">
+                        play.satoshis.quest
+                    </span>
+
+                </div>
+
+                <!-- Navigation Links -->
+                <nav class="h-10 flex justify-end items-center gap-5">
+
+                    <a
+                        href="map.html"
+                        class="text-white text-xl font-normal font-['Open_Sans'] hover:text-green-400 transition-colors"
+                    >Map</a>
+
+                    <a
+                        href="guides.html"
+                        class="text-white text-xl font-normal font-['Open_Sans'] hover:text-green-400 transition-colors"
+                    >Guides</a>
+
+                    <a
+                        href="forum.html"
+                        class="text-white text-xl font-normal font-['Open_Sans'] hover:text-green-400 transition-colors"
+                    >Forum</a>
+
+                    <a
+                        href="stats.html"
+                        class="text-white text-xl font-normal font-['Open_Sans'] hover:text-green-400 transition-colors"
+                    >Stats</a>
+
+                    <a
+                        href="donate.html"
+                        class="text-white text-xl font-normal font-['Open_Sans'] hover:text-green-400 transition-colors"
+                    >Donate</a>
+
+                    <!-- Connect Button -->
+                    <img
+                        class="size-8 rounded-sm"
+                        src="images/connect_button.svg"
+                        alt="Connect"
+                    >
+
+                </nav>
+
+            </div>
+        </div>
+    </div>
+
+
+<!-- ======================================= -->
+<!-- Header S, M                             -->
+<!-- ======================================= -->
+
+<div class="block md:hidden">
+
+    <!-- Mobile Header Bar -->
+    <div class="w-full px-8 py-4 bg-neutral-900 flex justify-between items-center">
+
+        <!-- Server Logo: Links to Home -->
+        <a href="index.html" aria-label="Home">
+            <img
+                class="size-6 rounded-sm"
+                src="images/server_icon.svg"
+                alt="Server icon"
+            >
+        </a>
+
+        <!-- Hamburger Menu Button -->
+        <button
+            id="mobile-menu-open"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-controls="mobile-side-menu"
+            aria-expanded="false"
+            class="flex items-center justify-center cursor-pointer"
+        >
+            <img
+                class="size-6"
+                src="images/hamburger_menu.svg"
+                alt=""
+            >
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ======================================= -->
+<!-- Mobile Menu Overlay                     -->
+<!-- ======================================= -->
+
+<div
+    id="mobile-menu-overlay"
+    class="fixed inset-0 z-40 bg-black/60 opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"
+    aria-hidden="true"
+></div>
+
+
+<!-- ======================================= -->
+<!-- Mobile Side Menu                        -->
+<!-- ======================================= -->
+
+<aside
+    id="mobile-side-menu"
+    class="fixed top-0 right-0 z-50 h-dvh w-72 max-w-[85vw] bg-neutral-900 shadow-xl translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Mobile navigation"
+    inert
+>
+
+    <!-- Menu Header -->
+    <div class="flex items-center justify-between px-6 py-5 border-b border-neutral-700">
+
+        <span class="text-white text-lg font-medium font-['Roboto_Slab']">
+            Menu
+        </span>
+
+        <!-- Close Button -->
+        <button
+            id="mobile-menu-close"
+            type="button"
+            aria-label="Close navigation menu"
+            class="text-white text-3xl leading-none hover:text-green-400 transition-colors cursor-pointer"
+        >
+            &times;
+        </button>
+
+    </div>
+
+
+    <!-- Navigation Links -->
+    <nav class="flex flex-col gap-1 p-4">
+
+        <a
+            href="map.html"
+            class="rounded-md px-4 py-3 text-white text-lg font-['Open_Sans'] hover:bg-neutral-800 hover:text-green-400 transition-colors"
+        >
+            Map
+        </a>
+
+        <a
+            href="guides.html"
+            class="rounded-md px-4 py-3 text-white text-lg font-['Open_Sans'] hover:bg-neutral-800 hover:text-green-400 transition-colors"
+        >
+            Guides
+        </a>
+
+        <a
+            href="forum.html"
+            class="rounded-md px-4 py-3 text-white text-lg font-['Open_Sans'] hover:bg-neutral-800 hover:text-green-400 transition-colors"
+        >
+            Forum
+        </a>
+
+        <a
+            href="stats.html"
+            class="rounded-md px-4 py-3 text-white text-lg font-['Open_Sans'] hover:bg-neutral-800 hover:text-green-400 transition-colors"
+        >
+            Stats
+        </a>
+
+        <a
+            href="donate.html"
+            class="rounded-md px-4 py-3 text-white text-lg font-['Open_Sans'] hover:bg-neutral-800 hover:text-green-400 transition-colors"
+        >
+            Donate
+        </a>
+
+    </nav>
+
+</aside>
+
+
+<!-- Guide Text -->
+
+<div class="w-full px-64 py-16 bg-white inline-flex flex-col justify-start items-center gap-8 overflow-hidden">
+  <div class="w-72 h-20 bg-zinc-300"></div>
+  <div class="self-stretch flex flex-col justify-start items-center gap-16">
+    <div class="self-stretch flex flex-col justify-start items-start gap-4">
+      <div class="self-stretch justify-start text-gray-900 text-2xl font-semibold font-['Inter'] uppercase leading-8">Claim Protection Using Grief Prevention
+      </div>
+      <div class="self-stretch justify-start text-gray-500 text-lg font-normal font-['Inter'] leading-7">Claims allow you to protect your builds and loot. Other players will not be able to build or break any blocks inside your claim, however, anyone has the ability to /siege your claim while you are inside the claim and online to search out vulnerabilities such as soft blocks (which ARE breakable during a siege).  
+      <br/><br/>TIP: Anyone can access your chests if they are left out in the open, but chests can also be “locked” by placing a block above them. But be aware.. Once a /siege has started “you” will not be able to place or break blocks until the siege has finished.</div>
+    </div>
+  </div>
+  <div class="self-stretch flex flex-col justify-start items-center gap-16">
+    <div class="self-stretch flex flex-col justify-start items-start gap-4">
+      <div class="self-stretch justify-start text-gray-900 text-2xl font-semibold font-['Inter'] uppercase leading-8">Creating Claims</div>
+      <div class="self-stretch justify-start text-gray-500 text-lg font-normal font-['Inter'] leading-7">When you initially join the server you will have a Treasure Chest in your inventory that will create a 5×5 area claim around the chest when place for the first time.  
+      <br/>
+      <br/>NOTE: Place this chest down wisely as this will be the grief protected site for your first home! Breaking and replacing the chest after the first placement will NOT result in a change to your claim boundaries! 
+      <br/>
+      <br/>(photos of claim corners here) 
+      <br/>
+      <br/>Take any golden shovel and right click the two opposite corners of the claim you wish to make. Note that claims have to use at least 80 claimblocks and be at least 3 blocks wide. Created claims can be checked by right clicking the land with a stick. 
+      <br/><br/>(video of claim guide here) </div>
+    </div>
+    <div class="self-stretch flex flex-col justify-start items-start gap-4">
+      <div class="self-stretch justify-start text-gray-900 text-2xl font-semibold font-['Inter'] uppercase leading-8">Resizing Your Claim</div>
+      <div class="self-stretch justify-start text-gray-500 text-lg font-normal font-['Inter'] leading-7">You can also easily resize your claim by right clicking on any corner with a golden shovel and then right clicking the spot to which you want to expand or retract your claim to. </div>
+    </div>
+    <div class="self-stretch flex flex-col justify-start items-start gap-4">
+      <div class="self-stretch justify-start text-gray-900 text-2xl font-semibold font-['Inter'] uppercase leading-8">Aquiring Additional Claim Blocks</div>
+      <div class="self-stretch justify-start text-gray-500 text-lg font-normal font-['Inter'] leading-7">Every player can obtain claimblocks simply by playing actively, giving you 60 blocks for every hour played. They can also be gotten through voting and donating. 
+      </div>
+    </div>
+    <div class="self-stretch flex flex-col justify-start items-start gap-4">
+      <div class="self-stretch justify-start text-gray-900 text-2xl font-semibold font-['Inter'] uppercase leading-8">Grief Prevention Command List
+      </div>
+      <div class="self-stretch justify-start text-gray-500 text-lg font-normal font-['Inter'] leading-7">/siege initiates a siege that can be used inside a claimed area to attack a player that’s hiding inside their house, weak blocks will be breakable in this attack. 
+      <br/>
+      <br/>/AbandonClaim to delete the claim your are standing in and own. 
+      <br/>
+      <br/>/trust is used for simple claim sharing, which gives another player permission to build in your claim. 
+      <br/>
+      <br/>/untrust or /ut to revoke any granted permissions to your claim. 
+      <br/>
+      <br/>/untrust all Removes all permissions for all players in your claim. 
+      <br/>
+      <br/>/accesstrust or /at grants access to ONLY buttons and switches. 
+      <br/>
+      <br/>/permissiontrust Grants a player permission to share his permission level with others. 
+      <br/>
+      <br/>/ContainerTrust or /ct permits a player to access your claim and additionally open your containers (chests, etc) and use your crafting equipment 
+      <br/>
+      <br/>/SubdivideClaims or /sc Switches your shovel to subdivision mode, so you can subdivide your claims. 
+      <br/>
+      <br/>/BasicClaims Puts your shovel back in basic claims mode. 
+      <br/>
+      <br/>/TrustList to see who has permission in your claim. 
+      <br/>
+      <br/>/trapped to escape from a claimed area you are trapped in 
+      <br/>
+      <br/>/giveclaim Allows player to give their claims to another player. 
+      <br/>
+      <br/>/BuyClaimBlocks or /BuyClaim Buy claim blocks using /balance server money 
+      <br/>
+      <br/>/SellClaimBlocks or /SellClaim Sell claim blocks for server money 
+      <br/>
+      <br/>/AbandonAllClaims to delete all your claims at once. </div>
+    </div>
+    <div class="self-stretch flex flex-col justify-start items-start gap-4">
+      <div class="self-stretch justify-start text-gray-900 text-2xl font-semibold font-['Inter'] uppercase leading-8">Laying Siege</div>
+      <div class="self-stretch justify-start text-gray-500 text-lg font-normal font-['Inter'] leading-7">It is only possible to /siege another claimed land while the targeted player is inside it. A siege lets you attack another users claimed land to loot and kill. During a siege soft blocks can be broken, these include: 
+      <br/>
+      <br/>DIRT, GRASS, COBBLESTONE, GRAVEL, SAND, GLASS, THIN_GLASS, WOOD, WOOL, SNOW, STAINED_GLASS, STAINED_GLASS_PANE, WOOD_DOUBLE_STEP, WOOD_STEP, NETHERRACK, COBBLESTONE_STAIRS  
+      <br/>
+      <br/> 
+      <br/>
+      <br/>YELLOW_WOOL, GRASS_BLOCK, ACACIA_PLANKS, BLACK_WOOL, BROWN_WOOL, PURPLE_WOOL, DEAD_BUSH, GREEN_WOOL, CYAN_WOOL, FERN, GLASS_PANE, GRAVEL, RED_WOOL, SAND, SPRUCE_PLANKS, DIRT, GLASS, LIGHT_BLUE_WOOL, LIGHT_GRAY_WOOL, JUNGLE_PLANKS, LIME_WOOL, BIRCH_PLANKS, BLUE_WOOL, ORANGE_WOOL, WHITE_WOOL, PINK_WOOL, SHORT_GRASS, COBBLESTONE, DARK_OAK_PLANKS, MAGENTA_WOOL, SNOW, OAK_PLANKS, GRAY_WOOL 
+      <br/>
+      <br/>For a full list use /guide siege 2 and /guide siege 3. Any blocks that are not on this list cannot be broken during siege and are siege-proof. 
+      <br/>
+      <br/>When you first join you cannot get sieged, but you also can’t siege other players. Only once you rank up to at least cadet you can get sieged. 
+      <br/>
+      <br/>While being sieged, containers in the claimed area will be disabled and nobody will be able to build there. Besieged players cannot toss items on the ground, or log out. So a player under siege must either wait it out, fight, or try to escape.
+      <br/>Anyone may join in on the attacking side without even using the /siege command. </div>
+    </div>
+    <div class="self-stretch flex flex-col justify-start items-start gap-4">
+      <div class="self-stretch justify-start text-gray-900 text-2xl font-semibold font-['Inter'] uppercase leading-8">When Does A Siege End?</div>
+      <div class="self-stretch justify-start text-gray-500 text-lg font-normal font-['Inter'] leading-7">The siege ends if the attacker gives up and leaves the area, if the defender escapes (attacker wins), when the time runs out, or when one of the two dies or logs out.
+      <br/>The defender hasn’t “escaped” until he’s both in an unprotected area and a reasonable distance away from the attacker. If a defender runs to another claim where he’s protected, the siege will extend to include that claim as well. 
+      <br/>
+      <br/>If the defending player loses, his doors unlock so that the victor can collect the loser’s drops, this means if your chests are not hidden or protected by strong blocks on top of them the attacker can loot your chests too. 
+      <br/>
+      <br/>IMPORTANT: If the besieged player logs out, they will lose the siege. This means that the besieged player will automatically drop the contents their inventory in addition to giving the victor temporary access to buttons and levers inside their claim. 
+      <br/>
+      <br/>NOTE: If the attacker logs out during a siege, they will lose the siege and will automatically drop the contents of their inventory. 
+      <br/>
+      <br/>After a short time, any players who don’t have access to the claim will be ejected to discourage in-home camping. The attacker can’t siege that defender or his claim again for an hour. 
+      <br/>
+      <br/>NOTE: Attackers are not able to /sethome inside a claim that they don’t have have /trust access to, even if they win a siege. </div>
+    </div>
+    <div class="self-stretch flex flex-col justify-start items-start gap-4">
+      <div class="self-stretch justify-start text-gray-900 text-2xl font-semibold font-['Inter'] uppercase leading-8">How To Prepare Your Base</div>
+      <div class="self-stretch justify-start text-gray-500 text-lg font-normal font-['Inter'] leading-7">It may seem like the attacker has the advantage, but a well-prepared defender can prepare not only through an impenetrable build, but integrate useful strategic elements like arrow slits, one-way doors, secret escape routes, and lava pipelines. Further, the attacker is vulnerable to surprise attack by the defender’s allies, because in most cases the attacker will be out in the open. </div>
+    </div>
+  </div>
+</div>
+    
+
+    </footer>
+
+<script>
+    const openButton = document.getElementById('mobile-menu-open');
+    const closeButton = document.getElementById('mobile-menu-close');
+    const sideMenu = document.getElementById('mobile-side-menu');
+    const overlay = document.getElementById('mobile-menu-overlay');
+
+    function openMenu() {
+        sideMenu.classList.remove('translate-x-full');
+        sideMenu.classList.add('translate-x-0');
+
+        overlay.classList.remove('opacity-0', 'pointer-events-none');
+        overlay.classList.add('opacity-100', 'pointer-events-auto');
+
+        sideMenu.removeAttribute('inert');
+        overlay.setAttribute('aria-hidden', 'false');
+        openButton.setAttribute('aria-expanded', 'true');
+
+        document.body.style.overflow = 'hidden';
+
+        closeButton.focus();
+    }
+
+    function closeMenu() {
+        sideMenu.classList.add('translate-x-full');
+        sideMenu.classList.remove('translate-x-0');
+
+        overlay.classList.add('opacity-0', 'pointer-events-none');
+        overlay.classList.remove('opacity-100', 'pointer-events-auto');
+
+        sideMenu.setAttribute('inert', '');
+        overlay.setAttribute('aria-hidden', 'true');
+        openButton.setAttribute('aria-expanded', 'false');
+
+        document.body.style.overflow = '';
+
+        openButton.focus();
+    }
+
+    openButton.addEventListener('click', openMenu);
+    closeButton.addEventListener('click', closeMenu);
+    overlay.addEventListener('click', closeMenu);
+
+    document.addEventListener('keydown', function (event) {
+        if (
+            event.key === 'Escape' &&
+            openButton.getAttribute('aria-expanded') === 'true'
+        ) {
+            closeMenu();
+        }
+    });
+</script>
+</body>
+</html>
