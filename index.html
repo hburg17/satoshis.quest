@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="theme-color" content="#171717">
     <title>Satoshi's Quest</title>
 
     <!-- Tailwind CSS Browser Script -->
@@ -12,345 +12,215 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body class="bg-white">
 
-    <!-- ======================================= -->
-    <!-- Header L, XL, 2XL                       -->
-    <!-- ======================================= -->
-
-    <div class="hidden md:block">
-        <div class="w-full h-18">
-            <div class="w-full h-full px-8 py-4 bg-neutral-900 flex justify-between items-center">
-
-                <!-- Server Logo and Name -->
-                <div class="h-10 flex justify-start items-center gap-4">
-
-                    <!-- Clickable Home Logo -->
-                    <a href="index.html" aria-label="Home">
-                        <img
-                            class="size-6 rounded-sm"
-                            src="images/server_icon.svg"
-                            alt="Server icon"
-                        >
-                    </a>
-
-                    <!-- Server Name -->
-                    <span class="text-white text-lg font-normal font-['Roboto_Slab'] leading-4">
-                        play.satoshis.quest
-                    </span>
-
-                </div>
-
-                <!-- Navigation Links -->
-                <nav class="h-10 flex justify-end items-center gap-5">
-
-                    <a
-                        href="map.html"
-                        class="text-white text-xl font-normal font-['Open_Sans'] hover:text-green-400 transition-colors"
-                    >Map</a>
-
-                    <a
-                        href="guides.html"
-                        class="text-white text-xl font-normal font-['Open_Sans'] hover:text-green-400 transition-colors"
-                    >Guides</a>
-
-                    <a
-                        href="forum.html"
-                        class="text-white text-xl font-normal font-['Open_Sans'] hover:text-green-400 transition-colors"
-                    >Forum</a>
-
-                    <a
-                        href="stats.html"
-                        class="text-white text-xl font-normal font-['Open_Sans'] hover:text-green-400 transition-colors"
-                    >Stats</a>
-
-                    <a
-                        href="donate.html"
-                        class="text-white text-xl font-normal font-['Open_Sans'] hover:text-green-400 transition-colors"
-                    >Donate</a>
-
-                    <!-- Connect Button -->
-                    <img
-                        class="size-8 rounded-sm"
-                        src="images/connect_button.svg"
-                        alt="Connect"
-                    >
-
-                </nav>
-
+    <!-- Desktop header: lg and larger -->
+    <header class="hidden lg:block">
+        <div class="w-full min-h-[72px] px-8 py-4 bg-neutral-900 flex justify-between items-center">
+            <div class="min-h-10 flex justify-start items-center gap-4">
+                <a href="index.html" aria-label="Home">
+                    <img class="size-6 rounded-sm" src="images/server_icon.svg" alt="Server icon">
+                </a>
+                <span class="text-white text-lg font-normal font-['Roboto_Slab'] leading-4">
+                    play.satoshis.quest
+                </span>
             </div>
+
+            <nav aria-label="Main navigation" class="min-h-10 flex justify-end items-center gap-5">
+                <a href="map.html" class="text-white text-xl font-normal font-['Open_Sans'] hover:text-green-400 transition-colors">Map</a>
+                <a href="guides.html" class="text-white text-xl font-normal font-['Open_Sans'] hover:text-green-400 transition-colors">Guides</a>
+                <a href="forum.html" class="text-white text-xl font-normal font-['Open_Sans'] hover:text-green-400 transition-colors">Forum</a>
+                <a href="stats.html" class="text-white text-xl font-normal font-['Open_Sans'] hover:text-green-400 transition-colors">Stats</a>
+                <a href="donate.html" class="text-white text-xl font-normal font-['Open_Sans'] hover:text-green-400 transition-colors">Donate</a>
+                <img class="size-8 rounded-sm" src="images/connect_button.svg" alt="Connect">
+            </nav>
         </div>
-    </div>
+    </header>
 
+    <!-- Mobile/tablet header: below lg -->
+    <header class="block lg:hidden">
+        <div class="w-full px-6 sm:px-8 py-4 bg-neutral-900 flex justify-between items-center">
+            <a href="index.html" aria-label="Home">
+                <img class="size-6 rounded-sm" src="images/server_icon.svg" alt="Server icon">
+            </a>
 
-<!-- ======================================= -->
-<!-- Header S, M                             -->
-<!-- ======================================= -->
-
-<div class="block md:hidden">
-
-    <!-- Mobile Header Bar -->
-    <div class="w-full px-8 py-4 bg-neutral-900 flex justify-between items-center">
-
-        <!-- Server Logo: Links to Home -->
-        <a href="index.html" aria-label="Home">
-            <img
-                class="size-6 rounded-sm"
-                src="images/server_icon.svg"
-                alt="Server icon"
-            >
-        </a>
-
-        <!-- Hamburger Menu Button -->
-        <button
-            id="mobile-menu-open"
-            type="button"
-            aria-label="Open navigation menu"
-            aria-controls="mobile-side-menu"
-            aria-expanded="false"
-            class="flex items-center justify-center cursor-pointer"
-        >
-            <img
-                class="size-6"
-                src="images/hamburger_menu.svg"
-                alt=""
-            >
-        </button>
-
-    </div>
-
-</div>
-
-
-<!-- ======================================= -->
-<!-- Mobile Menu Overlay                     -->
-<!-- ======================================= -->
-
-<div
-    id="mobile-menu-overlay"
-    class="fixed inset-0 z-40 bg-black/60 opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"
-    aria-hidden="true"
-></div>
-
-
-<!-- ======================================= -->
-<!-- Mobile Side Menu                        -->
-<!-- ======================================= -->
-
-<aside
-    id="mobile-side-menu"
-    class="fixed top-0 right-0 z-50 h-dvh w-72 max-w-[85vw] bg-neutral-900 shadow-xl translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col"
-    role="dialog"
-    aria-modal="true"
-    aria-label="Mobile navigation"
-    inert
->
-
-    <!-- Menu Header -->
-    <div class="flex items-center justify-between px-6 py-5 border-b border-neutral-700">
-
-        <span class="text-white text-lg font-medium font-['Roboto_Slab']">
-            Menu
-        </span>
-
-        <!-- Close Button -->
-        <button
-            id="mobile-menu-close"
-            type="button"
-            aria-label="Close navigation menu"
-            class="text-white text-3xl leading-none hover:text-green-400 transition-colors cursor-pointer"
-        >
-            &times;
-        </button>
-
-    </div>
-
-
-    <!-- Navigation Links -->
-    <nav class="flex flex-col gap-1 p-4">
-
-        <a
-            href="map.html"
-            class="rounded-md px-4 py-3 text-white text-lg font-['Open_Sans'] hover:bg-neutral-800 hover:text-green-400 transition-colors"
-        >
-            Map
-        </a>
-
-        <a
-            href="guides.html"
-            class="rounded-md px-4 py-3 text-white text-lg font-['Open_Sans'] hover:bg-neutral-800 hover:text-green-400 transition-colors"
-        >
-            Guides
-        </a>
-
-        <a
-            href="forum.html"
-            class="rounded-md px-4 py-3 text-white text-lg font-['Open_Sans'] hover:bg-neutral-800 hover:text-green-400 transition-colors"
-        >
-            Forum
-        </a>
-
-        <a
-            href="stats.html"
-            class="rounded-md px-4 py-3 text-white text-lg font-['Open_Sans'] hover:bg-neutral-800 hover:text-green-400 transition-colors"
-        >
-            Stats
-        </a>
-
-        <a
-            href="donate.html"
-            class="rounded-md px-4 py-3 text-white text-lg font-['Open_Sans'] hover:bg-neutral-800 hover:text-green-400 transition-colors"
-        >
-            Donate
-        </a>
-
-    </nav>
-
-</aside>
-
-
-    <!-- ======================================= -->
-    <!-- Callout                                 -->
-    <!-- ======================================= -->
-
-    <div class="w-full px-8 pt-8 pb-4 inline-flex flex-col justify-center items-center gap-2.5">
-
-        <div class="w-full max-w-[883px] px-4 py-6 bg-[#36A45B] rounded-lg shadow-[0px_2px_4px_0px_rgba(0,0,0,0.15)] flex flex-col justify-start items-center gap-4">
-
-            <!-- Page Title -->
-            <div class="self-stretch text-center text-zinc-100 text-4xl font-medium font-['Roboto_Slab'] leading-10">
-                Satoshi’s Quest
-            </div>
-
-            <!-- Copy Server Address -->
             <button
+                id="mobile-menu-open"
                 type="button"
-                onclick="navigator.clipboard.writeText('play.satoshis.quest').then(() => { const original = this.textContent; this.textContent = 'Copied!'; setTimeout(() => { this.textContent = original; }, 1500); }).catch(() => { this.textContent = 'Copy failed'; })"
-                class="text-center text-zinc-100 text-lg font-normal font-['Open_Sans'] leading-6 cursor-pointer hover:text-green-100 hover:underline transition-colors"
-                title="Click to copy address"
-                aria-label="Copy play.satoshis.quest to clipboard"
+                aria-label="Open navigation menu"
+                aria-controls="mobile-side-menu"
+                aria-expanded="false"
+                class="flex items-center justify-center cursor-pointer"
             >
-                play.satoshis.quest
+                <img class="size-6" src="images/hamburger_menu.svg" alt="">
             </button>
+        </div>
+    </header>
 
+    <!-- Mobile menu overlay -->
+    <div
+        id="mobile-menu-overlay"
+        class="fixed inset-0 z-40 bg-black/60 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"
+        aria-hidden="true"
+    ></div>
+
+    <!-- Mobile side menu: fixed to the right, shown below lg -->
+    <aside
+        id="mobile-side-menu"
+        class="fixed inset-y-0 right-0 z-50 flex h-dvh w-72 max-w-[85vw] flex-col bg-neutral-900 shadow-xl translate-x-full transition-transform duration-300 ease-in-out lg:hidden"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Mobile navigation"
+        inert
+    >
+        <div class="flex items-center justify-between px-6 py-5 border-b border-neutral-700">
+            <span class="text-white text-lg font-medium font-['Roboto_Slab']">Menu</span>
+            <button
+                id="mobile-menu-close"
+                type="button"
+                aria-label="Close navigation menu"
+                class="text-white text-3xl leading-none hover:text-green-400 transition-colors cursor-pointer"
+            >&times;</button>
         </div>
 
-    </div>
+        <nav aria-label="Mobile navigation links" class="flex flex-col gap-1 p-4">
+            <a href="map.html" class="rounded-md px-4 py-3 text-white text-lg font-['Open_Sans'] hover:bg-neutral-800 hover:text-green-400 transition-colors">Map</a>
+            <a href="guides.html" class="rounded-md px-4 py-3 text-white text-lg font-['Open_Sans'] hover:bg-neutral-800 hover:text-green-400 transition-colors">Guides</a>
+            <a href="forum.html" class="rounded-md px-4 py-3 text-white text-lg font-['Open_Sans'] hover:bg-neutral-800 hover:text-green-400 transition-colors">Forum</a>
+            <a href="stats.html" class="rounded-md px-4 py-3 text-white text-lg font-['Open_Sans'] hover:bg-neutral-800 hover:text-green-400 transition-colors">Stats</a>
+            <a href="donate.html" class="rounded-md px-4 py-3 text-white text-lg font-['Open_Sans'] hover:bg-neutral-800 hover:text-green-400 transition-colors">Donate</a>
+        </nav>
+    </aside>
 
+    <main>
+        <!-- Callout -->
+        <section class="w-full px-6 sm:px-8 pt-8 pb-4 flex flex-col justify-center items-center gap-2.5">
+            <div class="w-full max-w-[883px] px-4 py-6 bg-[#36A45B] rounded-lg shadow-[0px_2px_4px_0px_rgba(0,0,0,0.15)] flex flex-col justify-start items-center gap-4">
+                <h1 class="self-stretch text-center text-zinc-100 text-4xl font-medium font-['Roboto_Slab'] leading-10">
+                    Satoshi’s Quest
+                </h1>
 
-    <!-- ======================================= -->
-    <!-- Home Image                              -->
-    <!-- ======================================= -->
+                <button
+                    id="copy-server-address"
+                    type="button"
+                    class="text-center text-zinc-100 text-lg font-normal font-['Open_Sans'] leading-6 cursor-pointer hover:text-green-100 hover:underline transition-colors"
+                    title="Click to copy address"
+                    aria-label="Copy play.satoshis.quest to clipboard"
+                >play.satoshis.quest</button>
+                <span id="copy-status" class="sr-only" role="status" aria-live="polite"></span>
+            </div>
+        </section>
 
-    <div class="w-full px-8 pt-4 pb-4 inline-flex flex-col justify-center items-center gap-2.5">
+        <!-- Home image -->
+        <section class="w-full px-6 sm:px-8 pt-4 pb-4 flex flex-col justify-center items-center gap-2.5">
+            <img
+                class="w-full max-w-[883px] h-auto rounded-lg shadow-[0px_2px_4px_0px_rgba(0,0,0,0.15)]"
+                src="images/home_picture.png"
+                alt="Satoshi's Quest home page"
+            >
+        </section>
+    </main>
 
-        <img
-            class="w-full max-w-[883px] h-auto relative rounded-lg shadow-[0px_2px_4px_0px_rgba(0,0,0,0.15)]"
-            src="images/home_picture.png"
-            alt="Satoshi's Quest home page"
-        >
-
-    </div>
-
-
-    <!-- ======================================= -->
-    <!-- Footer L, XL, 2XL                       -->
-    <!-- ======================================= -->
-
+    <!-- Footer -->
     <footer class="hidden md:block">
-
         <div class="w-full p-8 bg-neutral-900 flex justify-between items-center">
-
-            <!-- Footer Branding -->
-            <div class="h-10 flex justify-start items-center gap-4">
-
+            <div class="min-h-10 flex justify-start items-center gap-4">
                 <div class="inline-flex flex-col justify-center items-start gap-1.5">
-
-                    <div class="text-white text-xl font-semibold font-['Roboto_Slab'] leading-4">
-                        Satoshi’s Quest
-                    </div>
-
-                    <div class="text-stone-300 text-base font-normal font-['Open_Sans'] leading-4">
-                        play.satoshis.quest
-                    </div>
-
+                    <div class="text-white text-xl font-semibold font-['Roboto_Slab'] leading-6">Satoshi’s Quest</div>
+                    <div class="text-stone-300 text-base font-normal font-['Open_Sans'] leading-5">play.satoshis.quest</div>
                 </div>
-
             </div>
 
-            <!-- Footer Social / Icon Placeholders -->
-            <div class="h-10 flex justify-end items-center gap-8">
-
+            <div class="min-h-10 flex justify-end items-center gap-8" aria-hidden="true">
                 <div class="w-5 h-6 bg-white"></div>
-
                 <div class="size-6 bg-white"></div>
-
                 <div class="size-6 bg-white"></div>
-
                 <div class="w-7 h-6 bg-white"></div>
-
             </div>
-
         </div>
-
     </footer>
 
-<script>
-    const openButton = document.getElementById('mobile-menu-open');
-    const closeButton = document.getElementById('mobile-menu-close');
-    const sideMenu = document.getElementById('mobile-side-menu');
-    const overlay = document.getElementById('mobile-menu-overlay');
+    <script>
+        const openButton = document.getElementById('mobile-menu-open');
+        const closeButton = document.getElementById('mobile-menu-close');
+        const sideMenu = document.getElementById('mobile-side-menu');
+        const overlay = document.getElementById('mobile-menu-overlay');
+        const mobileBreakpoint = window.matchMedia('(min-width: 1024px)');
 
-    function openMenu() {
-        sideMenu.classList.remove('translate-x-full');
-        sideMenu.classList.add('translate-x-0');
+        function openMenu() {
+            if (mobileBreakpoint.matches) return;
 
-        overlay.classList.remove('opacity-0', 'pointer-events-none');
-        overlay.classList.add('opacity-100', 'pointer-events-auto');
+            sideMenu.classList.remove('translate-x-full');
+            sideMenu.classList.add('translate-x-0');
 
-        sideMenu.removeAttribute('inert');
-        overlay.setAttribute('aria-hidden', 'false');
-        openButton.setAttribute('aria-expanded', 'true');
+            overlay.classList.remove('opacity-0', 'pointer-events-none');
+            overlay.classList.add('opacity-100', 'pointer-events-auto');
 
-        document.body.style.overflow = 'hidden';
-
-        closeButton.focus();
-    }
-
-    function closeMenu() {
-        sideMenu.classList.add('translate-x-full');
-        sideMenu.classList.remove('translate-x-0');
-
-        overlay.classList.add('opacity-0', 'pointer-events-none');
-        overlay.classList.remove('opacity-100', 'pointer-events-auto');
-
-        sideMenu.setAttribute('inert', '');
-        overlay.setAttribute('aria-hidden', 'true');
-        openButton.setAttribute('aria-expanded', 'false');
-
-        document.body.style.overflow = '';
-
-        openButton.focus();
-    }
-
-    openButton.addEventListener('click', openMenu);
-    closeButton.addEventListener('click', closeMenu);
-    overlay.addEventListener('click', closeMenu);
-
-    document.addEventListener('keydown', function (event) {
-        if (
-            event.key === 'Escape' &&
-            openButton.getAttribute('aria-expanded') === 'true'
-        ) {
-            closeMenu();
+            sideMenu.removeAttribute('inert');
+            overlay.setAttribute('aria-hidden', 'false');
+            openButton.setAttribute('aria-expanded', 'true');
+            document.body.style.overflow = 'hidden';
+            closeButton.focus();
         }
-    });
-</script>
+
+        function closeMenu({ restoreFocus = true } = {}) {
+            sideMenu.classList.add('translate-x-full');
+            sideMenu.classList.remove('translate-x-0');
+
+            overlay.classList.add('opacity-0', 'pointer-events-none');
+            overlay.classList.remove('opacity-100', 'pointer-events-auto');
+
+            sideMenu.setAttribute('inert', '');
+            overlay.setAttribute('aria-hidden', 'true');
+            openButton.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+
+            if (restoreFocus && !mobileBreakpoint.matches) {
+                openButton.focus();
+            }
+        }
+
+        openButton.addEventListener('click', openMenu);
+        closeButton.addEventListener('click', () => closeMenu());
+        overlay.addEventListener('click', () => closeMenu());
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && openButton.getAttribute('aria-expanded') === 'true') {
+                closeMenu();
+            }
+        });
+
+        mobileBreakpoint.addEventListener('change', (event) => {
+            if (event.matches) {
+                closeMenu({ restoreFocus: false });
+            }
+        });
+
+        document.querySelectorAll('#mobile-side-menu a').forEach((link) => {
+            link.addEventListener('click', () => closeMenu({ restoreFocus: false }));
+        });
+
+        document.getElementById('copy-server-address').addEventListener('click', async (event) => {
+            const button = event.currentTarget;
+            const status = document.getElementById('copy-status');
+            const originalText = 'play.satoshis.quest';
+
+            try {
+                await navigator.clipboard.writeText(originalText);
+                button.textContent = 'Copied!';
+                status.textContent = 'Server address copied to clipboard.';
+            } catch {
+                button.textContent = 'Copy failed';
+                status.textContent = 'Could not copy the server address. Please copy it manually.';
+            }
+
+            window.setTimeout(() => {
+                button.textContent = originalText;
+            }, 1500);
+        });
+    </script>
 </body>
 </html>
